@@ -1,0 +1,16 @@
+{
+  "name": "xapi2gremlin",
+  "version": "0.0.1",
+  "description": "Translate xAPI statements to Gremlin query language",
+  "main": "index.js",
+  "scripts": {
+    "test": "node convert.js -s ./test.json"
+  },
+  "author": "Bob Zhou",
+  "license": "ISC",
+  "dependencies": {
+    "grex": "^0.8.0",
+    "minimist": "^1.2.0",
+    "uuid": "^3.0.1"
+  }
+}
