@@ -21,7 +21,15 @@ function parseActor(actor, query=[], level=0, attachto=""){
         query.push(`if (!actor${level}.hasNext()) actor${level}=${graph}.addVertex(label, "agent", "mbox", '${actor.mbox}', "name", '${actor.name}')`);
     }
     else if (actor.objectType == "Group"){
-        // implement later
+        // it seems we need to add uuid to identify a group
+        let uuid = uuidv4();
+        query.push(`actor${level}=${g}.V().has("group", "id", '${actor.id}')`);
+        query.push(`if (!actor${level}.hasNext()) actor${level}=${graph}.addVertex(label, "group", "id", '${uuid}', "name", '${actor.name}')`);
+        // now members
+        _.each(actor.member, v => {
+            parseActor(v, query, level+1, `group${level}`);
+        })
+
     }
 
     // link actor and statement

@@ -56,8 +56,25 @@
 },
 {
 	"actor": {
-		"objectType": "Agent",
-		"mbox":"mailto:test@example.com"
+		"objectType": "Group",
+		"name":"I am a group",
+		"member":[
+		 	{
+				"objectType": "Agent",
+				"mbox":"mailto:1@example.com",
+				"name":"student1"
+			},
+			{
+				"objectType": "Agent",
+				"mbox":"mailto:2@example.com",
+				"name":"student2"
+			},
+			{
+				"objectType": "Agent",
+				"mbox":"mailto:3@example.com",
+				"name":"student3"
+			}
+		]
 	},
 	"verb" : {
 		"id":"http://example.com/planned",
