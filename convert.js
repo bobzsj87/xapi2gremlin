@@ -27,7 +27,7 @@ function parseActor(actor, query=[], level=0, attachto=""){
         query.push(`if (!actor${level}.hasNext()) actor${level}=${graph}.addVertex(label, "group", "id", '${uuid}', "name", '${actor.name}')`);
         // now members
         _.each(actor.member, v => {
-            parseActor(v, query, level+1, `group${level}`);
+            parseActor(v, query, level+1, `actor${level}`);
         })
 
     }

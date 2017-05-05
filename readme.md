@@ -33,20 +33,20 @@ statement0.addEdge('has', attachment01)
 
 
 1:
-statement0=graph.addVertex(label, "statement", "id", 'b54e5ec6-389b-495c-9733-3439b32123a3', "timestamp", 1493823142357)
+statement0=graph.addVertex(label, "statement", "id", 'b5731d0f-670b-4b50-8942-5a00d1270fbc', "timestamp", 1493990919662)
 actor0=g.V().has("group", "id", 'undefined')
-if (!actor0.hasNext()) actor0=graph.addVertex(label, "group", "id", '9ebc4ad2-ad78-4e44-a4ca-7a39ea214004', "name", 'I am a group')
+if (!actor0.hasNext()) actor0=graph.addVertex(label, "group", "id", '483a0a23-127b-4815-adc9-c47c51d67759', "name", 'I am a group')
 actor1=g.V().has("agent", "mbox", 'mailto:1@example.com')
 if (!actor1.hasNext()) actor1=graph.addVertex(label, "agent", "mbox", 'mailto:1@example.com', "name", 'student1')
-group0.addEdge('has', actor1);
+actor0.addEdge('has', actor1);
 actor1=g.V().has("agent", "mbox", 'mailto:2@example.com')
 if (!actor1.hasNext()) actor1=graph.addVertex(label, "agent", "mbox", 'mailto:2@example.com', "name", 'student2')
-group0.addEdge('has', actor1);
+actor0.addEdge('has', actor1);
 actor1=g.V().has("agent", "mbox", 'mailto:3@example.com')
 if (!actor1.hasNext()) actor1=graph.addVertex(label, "agent", "mbox", 'mailto:3@example.com', "name", 'student3')
-group0.addEdge('has', actor1);
+actor0.addEdge('has', actor1);
 statement0.addEdge('has', actor0);
-statement1=graph.addVertex(label, "statement", "id", '47252b9e-eebf-40ee-a454-1c0d85e2f78a', "timestamp", 1493823142357)
+statement1=graph.addVertex(label, "statement", "id", 'fe14e179-0df4-46fb-837f-251619da5605', "timestamp", 1493990919662)
 actor1=g.V().has("agent", "mbox", 'mailto:test@example.com')
 if (!actor1.hasNext()) actor1=graph.addVertex(label, "agent", "mbox", 'mailto:test@example.com', "name", 'undefined')
 statement1.addEdge('has', actor1);
